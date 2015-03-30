@@ -3,7 +3,11 @@ require 'nokogiri'
 require 'ox'
 require 'colorize'
 
-source_file = "/sw/apps/perforchestor/uploads/1/52/ScreenNavigationTest_20111107.jtl"
+# This file contains a Jmeter Performance Test Result
+# it contains 1.5M lines and is 51MB
+source_file = "test_file.xml"
+
+
 doc1 = Nokogiri::XML(File.open(source_file)); nil
 doc2 = Ox.load_file(source_file);nil
 
