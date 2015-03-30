@@ -11,13 +11,13 @@ The file was produced in Jmeter Performance Testing tool and it contains *1.5M l
 - Processor: 2.4 GHz Intel Core i5
 - Memory: 8 GB 1600 MHz DDR3
 
-*Gems Tested*
-    - Nokogiri
-    - Ox
+** GEMS Tested **
+- Nokogiri
+- Ox
 
-*Methods Tested* 
-  - In Memory and locate element
-  - Full document SAX Reader
+## Execute Test
+
+You will have to install the specific Gems required for the test, with Bundler or in your existing gemset is you are using rvm.
 
 ```bash
 #ruby xml_mem_compare.rb 
@@ -28,6 +28,10 @@ nokogiri:   1.040000   0.010000   1.050000 (  1.044546)
 ox:        36.090000   0.180000  36.270000 ( 36.413217)
 Test Completed: OK
 #
+
+## Overview
+
+The following example shows an snippet of the simple mechanism to capture the responses from both gems.
 
 ```ruby
 n=10
