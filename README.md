@@ -27,15 +27,3 @@ Testing Memory XML Parser
 nokogiri:   1.040000   0.010000   1.050000 (  1.044546)
 ox:        36.090000   0.180000  36.270000 ( 36.413217)
 Test Completed: OK
-#
-
-## Overview
-
-The following example shows an snippet of the simple mechanism to capture the responses from both gems.
-
-```ruby
-n=10
-Benchmark.bm(9) do |x|
-  x.report("nokogiri:")   { n.times do ; doc1.xpath("//httpSample").size; end }
-  x.report("ox:") { n.times do   ; doc2.locate("*/httpSample").size; end }
-end
